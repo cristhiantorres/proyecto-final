@@ -6,17 +6,31 @@ class Platos extends Component {
 
   render(){
 
+    let platos_div = [];
+
+    const llenar_array = VarTiendaController.platos.forEach(function(value, index) {
+
+      platos_div.push(<li className="list-group-item">{value.nombre}</li>);
+
+    });
+
     return (
 
-        <div className="panel panel-primary">
+      <div className="panel panel-primary">
 
-          <div className="panel-body">
+      <div className="panel-heading">
+      
+        <h5>Lista de Platos</h5>
+      
+      </div>
 
-              <h5>Lista de Platos</h5>
+      <div className="list-group">
 
-          </div>
+      { platos_div }
 
-        </div>
+      </div>
+
+      </div>
 
       );
 
